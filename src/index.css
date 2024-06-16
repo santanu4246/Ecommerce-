@@ -9,9 +9,11 @@
     width: 100%;
   }
   body{
-    background-color: #121212;
+    background-color: #d5b7b7;
   }
   a{
     text-decoration: none;
-    
+    color: black;
   }
+
+  
