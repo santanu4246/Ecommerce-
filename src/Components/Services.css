@@ -1,0 +1,53 @@
+.Services-Container{
+    max-height: 150vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 5rem 0;
+}
+.Services{
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+}
+.Services-middle{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Services-middle-elements{
+    height: 50%;
+    background-color: rgb(222, 235, 246);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.color{
+    background-color: rgb(222, 235, 246);
+}
+.Services-Container .icon{
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 2rem;
+}
+.Services-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Services-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}

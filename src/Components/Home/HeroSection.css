@@ -1,0 +1,18 @@
+.Hero-Coantainer{
+    height: 35vh;
+    width: 100vw;
+}
+.Hero-right {
+    background-image: url('../../../public/Assests/hero_image.jpg');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width:769px) {
+    .Hero-right{
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

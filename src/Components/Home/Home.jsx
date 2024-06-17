@@ -1,8 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import HeroSection from './HeroSection'
+import Services from '../Services'
+import Trusted from '../Trusted'
 const Home = () => {
   return (
-    <div className='test'>Home</div>
+    <>
+    <HeroSection/>
+    <Services/>
+    <Trusted/>
+    </>
   )
 }
 
