@@ -9,7 +9,6 @@ const Home = () => {
     <HeroSection/>
     <Services/>
     <Trusted/>
-    <Footer/>
     </>
   )
 }

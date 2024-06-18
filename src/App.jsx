@@ -9,12 +9,12 @@ import Cart from './Components/Cart/Cart';
 import Error from './Components/ErrorPage/Error';
 
 import Header from './Components/Header/Header';
+import Footer from './Components/Footer';
 const App = () => {
   
   return (
    
       <BrowserRouter>
-
         <Header/>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,6 +25,7 @@ const App = () => {
           <Route path="*" element={<Error />} />
           <Route path="/productdetils/:id" element={<SingleProduct />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
 
   )
