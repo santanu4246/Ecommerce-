@@ -10,6 +10,8 @@
   }
   body{
     background-color: #d5b7b7;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
   a{
     text-decoration: none;

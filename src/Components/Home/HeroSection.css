@@ -1,6 +1,7 @@
 .Hero-Coantainer{
     height: 35vh;
     width: 100vw;
+    overflow: hidden;
 }
 .Hero-right {
     background-image: url('../../../public/Assests/hero_image.jpg');
@@ -16,3 +17,4 @@
         background-repeat: no-repeat;
     }
 }
+

@@ -1,0 +1,26 @@
+.TrustedContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 200vh;
+    width: 100%;
+    padding: 5rem 0;
+    background-color: whitesmoke;
+}
+
+.TrustesCompanyLogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.slide img {
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .TrustesCompanyLogos {
+        justify-content: center;
+    }
+}
