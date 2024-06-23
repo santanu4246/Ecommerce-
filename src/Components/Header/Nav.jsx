@@ -9,10 +9,12 @@ const Nav = () => {
   const [mobilenav, setmobilenav] = useState(false);
 
   const handleCrossClick = () => {
+    document.querySelector('body').style.overflow="auto";
     setmobilenav(false);
   };
 
   const handleMenuClick = () => {
+    document.querySelector('body').style.overflow="hidden";
     setmobilenav(true);
   };
 

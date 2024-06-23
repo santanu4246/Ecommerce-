@@ -23,6 +23,25 @@ const ProducerReducer = (state, action) => {
                 isloading: false,
                 isError: true,
             };
+
+        case "SET_SINGLEPAGE_LODING":
+            return {
+                ...state,
+                isSingleLoding: true,
+            };
+        
+        case "SET_SINGLE_PRODUCT":
+            return{
+                ...state,
+                isSingleLoding:false,
+                singleProduct: action.payload,
+            }
+        case "SET_SINGLEPAGE_ERROR":
+            return {
+                ...state,
+                isSingleLoding: false,
+                isError: true,
+            };
         default:
             return state;
 
