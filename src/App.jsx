@@ -11,22 +11,22 @@ import Error from './Components/ErrorPage/Error';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer';
 const App = () => {
-  
+
   return (
-   
-      <BrowserRouter>
-        <Header/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Product />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="*" element={<Error />} />
-          <Route path="/productdetils/:id" element={<SingleProduct />} />
-        </Routes>
-        <Footer/>
-      </BrowserRouter>
+
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Product />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="*" element={<Error />} />
+        <Route path="/productdetils/:id" element={<SingleProduct />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
 
   )
 }
