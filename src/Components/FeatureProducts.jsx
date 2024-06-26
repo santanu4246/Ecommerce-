@@ -8,18 +8,23 @@ const FeatureProducts = () => {
     // console.log(featureProducts);
     return (
         <div className='FeatureProductsContainer'>
+        {isLoading ? (
+         "loading..."
+        ) : (
+            <>
             <div className="container">
-                <span>Check Now!</span>
-                <h2>Our Features Services</h2>
+              <span>Check Now!</span>
+              <h2>Our Features Services</h2>
             </div>
             <div className="products">
-                {
-                    featureProducts.map((elem) => {
-                        return <Product key={elem.id}{...elem} />
-                    })
-                }
+              {featureProducts.map((elem) => (
+                <Product key={elem.id} {...elem} />
+              ))}
             </div>
-        </div>
+          </>
+        )}
+      </div>
+      
     )
 }
 

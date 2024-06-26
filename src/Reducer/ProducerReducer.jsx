@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ProducerReducer = (state, action) => {
-   
+
     switch (action.type) {
         case "SET_LOADING":
             return {
@@ -13,9 +13,9 @@ const ProducerReducer = (state, action) => {
             const featureData = action.payload.filter((elem) => elem.featured === true);
             return {
                 ...state,
-                isloading:false,
-                products:action.payload,
-                featureProducts:featureData
+                isloading: false,
+                products: action.payload,
+                featureProducts: featureData
             };
         case "API_ERROR":
             return {
@@ -29,11 +29,11 @@ const ProducerReducer = (state, action) => {
                 ...state,
                 isSingleLoding: true,
             };
-        
+
         case "SET_SINGLE_PRODUCT":
-            return{
+            return {
                 ...state,
-                isSingleLoding:false,
+                isSingleLoding: false,
                 singleProduct: action.payload,
             }
         case "SET_SINGLEPAGE_ERROR":
