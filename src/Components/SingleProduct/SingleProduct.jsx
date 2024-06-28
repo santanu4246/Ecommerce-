@@ -7,6 +7,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 import FormatPrice from '../Helper/FormatPrice'
 import { TbReplace, TbTruckDelivery } from "react-icons/tb";
 import { MdSecurity } from 'react-icons/md';
+import Star from '../Star';
 const SingleProduct = () => {
 
   const { getSingleProduct, isSingleLoding, singleProduct } = useProductContext()
@@ -29,8 +30,7 @@ const SingleProduct = () => {
           </div>
           <div className="Single-product-details">
             <h2>{name}</h2>
-            <span>{stars}</span>
-            <span>{reviews}</span>
+           <Star stars = {stars} reviews = {reviews}/>
             <p>
               MRP: <del><FormatPrice price={price + 250000} /></del>
             </p>

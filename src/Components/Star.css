@@ -1,0 +1,9 @@
+.star-component {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.star-component .icons {
+    color: rgb(255, 132, 0);
+
+}
