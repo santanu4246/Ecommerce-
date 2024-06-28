@@ -46,18 +46,18 @@
     border-radius: 50%;
 }
 .product-data-warranty{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(0, 0, 0);
     padding: 0.5rem;
 }
 @media (max-width:768px) {
     .SingleProductContainer{
-        max-height: 250vh;
+        height: 100%;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-top: 5rem;
+        padding-top: 2rem;
         padding-bottom: 2rem;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
     .Single-image{
         width: 70%;
@@ -65,5 +65,4 @@
     .Single-image img{
         width: 100%;
     }
-   
 }
