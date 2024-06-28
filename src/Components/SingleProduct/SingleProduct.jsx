@@ -8,14 +8,13 @@ import FormatPrice from '../Helper/FormatPrice'
 import { TbReplace, TbTruckDelivery } from "react-icons/tb";
 import { MdSecurity } from 'react-icons/md';
 import Star from '../Star';
+import AdToCart from '../AdToCart';
 const SingleProduct = () => {
 
   const { getSingleProduct, isSingleLoding, singleProduct } = useProductContext()
-
   const { id } = useParams();
   // console.log(id);
   const { id: alis, name, company, price, description, category, stock, shipping, reviews, stars, image= [{url: ""}] } = singleProduct
-  console.log(image);
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`)
   }, [])
@@ -65,6 +64,8 @@ const SingleProduct = () => {
               <p>Brand: <span> {company}</span></p>
 
             </div>
+            <hr />
+            {stock > 0 && <AdToCart Product={singleProduct}/>}
           </div>
         </>
       )}
