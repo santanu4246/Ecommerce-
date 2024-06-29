@@ -1,0 +1,16 @@
+.SortContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+.grid-list{
+    display: flex;
+    gap: 0.5rem;
+}
+.grid-list .icons{
+    padding: .5rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}

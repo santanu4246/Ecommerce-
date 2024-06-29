@@ -35,7 +35,7 @@ const Header = () => {
                         <Link to="/cart">
                             <div className="cart">
                                 <MdOutlineShoppingCart id='cart-icon' />
-                                <span className='items-count'>10</span>
+                                <span className='items-count'>0</span>
                             </div>
                         </Link>
                     </div>

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useProductContext } from '../../Context/ProductContext';
 const API = "https://api.pujakaitem.com/api/products";
 import "./SingleProduct.css"
@@ -66,6 +66,8 @@ const SingleProduct = () => {
             </div>
             <hr />
             {stock > 0 && <AdToCart Product={singleProduct}/>}
+            <Link to={"/cart"}><button style={{width:"100px",borderRadius:"10px"}}>Add to cart</button></Link>
+            
           </div>
         </>
       )}

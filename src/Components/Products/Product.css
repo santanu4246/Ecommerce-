@@ -1,0 +1,16 @@
+.ProductContainer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+   justify-content: center;
+   background-color: white;
+}
+.ProductContainerRight{
+    width: 60%;
+    /* background-color: rgb(85, 28, 28); */
+    padding: 5rem 0;
+}
+.FilterSection{
+    width: 300px;
+    height: 100%;
+}
