@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
    justify-content: center;
-   background-color: white;
+   background-color: rgb(64, 64, 64);
 }
 .ProductContainerRight{
     width: 60%;
@@ -11,6 +11,6 @@
     padding: 5rem 0;
 }
 .FilterSection{
-    width: 300px;
+    width: 20%;
     height: 100%;
 }

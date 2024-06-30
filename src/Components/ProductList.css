@@ -8,11 +8,6 @@
     grid-template-columns: repeat(3,1fr);
     gap: 1rem;
 }
-.ProductListContainer-cards{
-    height: 200px;
-    width: 350px;
-    overflow: hidden;
-}
 .ProductListContainer-cards img{
     /* height: 100%; */
     width: 100%;
