@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './FilterSection.css'
 import { FaCheck } from "react-icons/fa";
+import { useFilterContext } from '../Context/FilterContext';
+
 const FilterSection = () => {
   const [Color, setColor] = useState(null);
   const list = [
@@ -18,13 +20,15 @@ const FilterSection = () => {
     '#DC143C',
     '#00CED1'
   ];
-
+const {filters:{text},updateFilterValue} = useFilterContext();
   return (
     <div className='FilterSectionContainer'>
-      <input type="text" name="" id="" placeholder='SEARCH'/>
+      <form onSubmit={(e) => e.preventDefault()}>
+        <input type="text" name="text" value={text} placeholder='SEARCH' onChange={updateFilterValue} />
+      </form>
 
       <div className="filters">
-        <p style={{fontSize:"1.2rem"}}>Catagory</p>
+        <p style={{ fontSize: "1.2rem" }}>Catagory</p>
         {
           list.map((item, index) => {
             return <p key={index}>{item}</p>
@@ -38,23 +42,23 @@ const FilterSection = () => {
           <option value="">All</option>
         </select>
       </div>
-     
+
       <div className="colorsOptions">
-      <p>Colors</p>
-      <div className="Colors">
-        <p>All</p>
-        {
-          colors.map((curColor, index) => (
-            <button
-              key={index}
-              style={{ backgroundColor: curColor }}
-              className={Color === curColor ? "Colorbtn active" : "Colorbtn"}
-              onClick={() => setColor(curColor)}
-            >
-              {Color === curColor && <FaCheck className='check' />}
-            </button>
-          ))
-        }
+        <p>Colors</p>
+        <div className="Colors">
+          <p>All</p>
+          {
+            colors.map((curColor, index) => (
+              <button
+                key={index}
+                style={{ backgroundColor: curColor }}
+                className={Color === curColor ? "Colorbtn active" : "Colorbtn"}
+                onClick={() => setColor(curColor)}
+              >
+                {Color === curColor && <FaCheck className='check' />}
+              </button>
+            ))
+          }
         </div>
       </div>
 
@@ -62,7 +66,7 @@ const FilterSection = () => {
         <p>Price</p>
         <input type="range" name="" id="" />
       </div>
-        <button>Clear Filter</button>
+      <button>Clear Filter</button>
     </div>
   )
 }
