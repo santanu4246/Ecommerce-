@@ -4,6 +4,7 @@ import { FaCheck } from "react-icons/fa";
 import { useFilterContext } from '../Context/FilterContext';
 
 const FilterSection = () => {
+  const [clickedIndex, setClickedIndex] = useState(null);
   const [Color, setColor] = useState(null);
   const list = [
     "All",
@@ -20,18 +21,42 @@ const FilterSection = () => {
     '#DC143C',
     '#00CED1'
   ];
-const {filters:{text},updateFilterValue} = useFilterContext();
+
+
+
+  const { filters: { text}, updateFilterValue, all_products } = useFilterContext();
+  const getUniqueData = (data, property) => {
+    let newVal = data.map((curElem) => {
+      return curElem[property];
+    })
+    newVal = ["All", ...new Set(newVal)];
+    return newVal;
+  }
+  const catagorydata = getUniqueData(all_products, "category")
+
+  const handleClick = (event, index) => {
+    setClickedIndex(index); // Update the state
+    updateFilterValue(event); // Call the context function
+  };
   return (
     <div className='FilterSectionContainer'>
       <form onSubmit={(e) => e.preventDefault()}>
         <input type="text" name="text" value={text} placeholder='SEARCH' onChange={updateFilterValue} />
       </form>
-
       <div className="filters">
         <p style={{ fontSize: "1.2rem" }}>Catagory</p>
         {
-          list.map((item, index) => {
-            return <p key={index}>{item}</p>
+          catagorydata.map((item, index) => {
+            return <button key={index} name='category' value={item}  onClick={(event) => handleClick(event, index)}  style={{
+              background: 'none',
+              border: 'none',
+              color: 'inherit',
+              cursor: 'pointer',
+              font: 'inherit',
+              textAlign: 'left',
+              textTransform: 'capitalize',
+              textDecoration: clickedIndex === index ? 'underline' : 'none'
+            }}>{item}</button>
           })
         }
       </div>
