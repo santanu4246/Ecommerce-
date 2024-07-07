@@ -66,7 +66,7 @@ const SingleProduct = () => {
             </div>
             <hr />
             {stock > 0 && <AdToCart Product={singleProduct}/>}
-            <Link to={"/cart"}><button style={{width:"100px",borderRadius:"10px"}}>Add to cart</button></Link>
+            
             
           </div>
         </>

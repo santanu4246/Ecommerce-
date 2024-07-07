@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import './AdToCart.css'
 import { FaCheck } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import { useCartContext } from '../Context/CartContext';
 
 const AdToCart = ({ Product }) => {
     const { id, colors, stock } = Product;
     const [Color, setColor] = useState(null);
-
+    const {addtoCart} = useCartContext();
     return (
         <div className='colors'>
             <p>
@@ -23,6 +25,7 @@ const AdToCart = ({ Product }) => {
                     ))
                 }
             </p>
+            <Link to={"/cart"} onClick={()=>addtoCart(id,Color,Product)}><button style={{width:"100px",borderRadius:"10px",marginTop:"20px"}}>Add to cart</button></Link>
         </div>
     )
 }

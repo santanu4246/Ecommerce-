@@ -1,0 +1,28 @@
+.cart-image img {
+    height: 50px;
+}
+
+.color-style {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.img-name-color {
+    display: flex;
+    gap: 1rem;
+}
+
+.CartItemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.color-div {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    margin-top: 5px;
+}
