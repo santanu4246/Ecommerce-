@@ -11,11 +11,11 @@ To install the project, follow these steps:
 
 1. Clone the repository:
 ```sh
-   git clone https://github.com/santanu4246/Dev-Dynamos-ReimagineRound1.git
+   git clone https://github.com/santanu4246/Ecommerce-.git
 ```
 2. Navigate to the project directory:
 ```sh
-   cd Dev-Dynamos-ReimagineRound1
+   cd Ecommerce-
 ```
 3. Install the dependencies:
 ```sh
