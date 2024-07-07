@@ -7,7 +7,7 @@ const CartItem = ({ id, name, image, Color, price }) => {
     return (
         <div className='CartItemContainer'>
 
-            <div className="img-name-color">
+            <div className="img-name-color cardItemInnerX">
                 <div className="cart-image">
                     <img src={image} alt="" />
                 </div>
@@ -21,21 +21,21 @@ const CartItem = ({ id, name, image, Color, price }) => {
                 </div>
             </div>
 
-            <div className='Cart-item-price'>
+            <div className='Cart-item-price cardItemInnerX'>
                 <p>
                     <FormatPrice price={price} />
                 </p>
             </div>
 
-            <div className="Cart-item-quantity">
+            <div className="Cart-item-quantity cardItemInnerX">
                 <p>1</p>
             </div>
 
-            <div className="Cart-item-subtotal">
+            <div className="Cart-item-subtotal cardItemInnerX">
                 <p>0</p>
             </div>
 
-            <div className="Cart-item-remove">
+            <div className="Cart-item-remove cardItemInnerX">
                 <p>0</p>
             </div>
         </div>

@@ -2,7 +2,7 @@
     height: 100vh;
     width: 100%;
     background-color: rgb(79, 78, 78);
-    padding: 0 30rem;
+    padding: 0 25rem;
     box-sizing: border-box;
     padding-top: 5rem;
 }
@@ -10,9 +10,21 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0.75rem;
     box-sizing: border-box;
+    padding-bottom: 1rem;
+    /* border: 1px solid red; */
 }
 .cart-item{
     width: 100%;
+}
+.CartContainerHeading p{
+    /* border: 1px solid white; */
+    flex: 5;
+    justify-content: center;
+    text-align: center;
+}
+.cardItemInnerX{
+    flex: 5;
+    /* border: 1px solid; */
+    text-align: center;
 }
