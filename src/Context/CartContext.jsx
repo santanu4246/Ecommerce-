@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
 import reducer from "../Reducer/CartReducer";
-import { json } from "react-router-dom";
 const CartContext = createContext();
 
 function getLocalCartData (){
@@ -39,7 +38,11 @@ const CartProvider = ({ children }) => {
         dispatch({ type: "REMOVE_ITEM", payload: id });
     }
 
-    return <CartContext.Provider value={{ ...state, addtoCart, removeitem }}>
+    const ClearCart = ()=>{
+        dispatch({type:"CLEAR_CART"})
+    }
+
+    return <CartContext.Provider value={{ ...state, addtoCart, removeitem ,ClearCart}}>
         {children}
     </CartContext.Provider>
 }
