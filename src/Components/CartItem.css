@@ -1,5 +1,5 @@
 .cart-image img {
-    height: 50px;
+    width: 100px;
 }
 
 .color-style {
@@ -25,4 +25,24 @@
     align-items: center;
     gap: .3rem;
     margin-top: 5px;
+}
+
+.cardItemInnerX {
+    flex: 5;
+    /* border: 1px solid; */
+    text-align: center;
+}
+.Cart-item-quantity{
+    flex: 5;
+    display: flex;
+   justify-content: center;
+   gap: .5rem;
+}
+.Cart-item-quantity button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    /* cursor: pointer;  */
+    outline: none; 
 }

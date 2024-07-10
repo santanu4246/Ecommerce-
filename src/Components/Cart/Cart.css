@@ -23,8 +23,3 @@
     justify-content: center;
     text-align: center;
 }
-.cardItemInnerX{
-    flex: 5;
-    /* border: 1px solid; */
-    text-align: center;
-}
