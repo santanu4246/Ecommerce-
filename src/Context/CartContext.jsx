@@ -40,6 +40,7 @@ const CartProvider = ({ children }) => {
     }
 
     const ClearCart = ()=>{
+ 
         dispatch({type:"CLEAR_CART"})
     }
 

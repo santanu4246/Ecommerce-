@@ -27,7 +27,8 @@ const CartReducer = (state, action) => {
             );
             return {
                 ...state,
-                cart: updatedCart
+                cart: updatedCart,
+                amount:0
             };
         }
 
@@ -35,7 +36,9 @@ const CartReducer = (state, action) => {
             return {
                 ...state,
                 cart: [],
+                amount:0,
             };
+            
         }
 
         case "UPDATE_ITEM_QUANTITY": {

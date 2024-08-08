@@ -63,11 +63,11 @@ const decreaseAmount = () => {
 
       <div className="Cart-item-quantity cardItemInnerX">
         <button onClick={decreaseAmount} style={{pointerEvents: amount <= 1 ? 'none' : 'auto' }}>
-          <FaMinus />
+          <FaMinus style={{pointerEvents: amount <= 1 ? 'none' : 'auto' }}/>
         </button>
         <p>{amount}</p>
         <button onClick={increaseAmount} style={{pointerEvents: amount >= max ? 'none' : 'auto' }}>
-          <FaPlus />
+          <FaPlus style={{pointerEvents: amount >= max ? 'none' : 'auto' }}/>
         </button>
       </div>
 
