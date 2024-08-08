@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useCartContext } from '../Context/CartContext';
 
 const AdToCart = ({ Product }) => {
-    const { id, colors, stock } = Product;
+    const { id, colors} = Product;
     const [Color, setColor] = useState(null);
     const {addtoCart} = useCartContext();
     return (

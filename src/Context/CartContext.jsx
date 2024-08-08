@@ -16,7 +16,8 @@ const initialstate = {
     cart : getLocalCartData(),
     total_item: "",
     total_amount: "",
-    shipping_fee: 50000
+    shipping_fee: 50000,
+    amount:0
 }
 
 
@@ -42,7 +43,12 @@ const CartProvider = ({ children }) => {
         dispatch({type:"CLEAR_CART"})
     }
 
-    return <CartContext.Provider value={{ ...state, addtoCart, removeitem ,ClearCart}}>
+   
+  const updateItemQuantity = (id, amount) => {
+    dispatch({ type: "UPDATE_ITEM_QUANTITY", payload: { id, amount } });
+  };
+
+    return <CartContext.Provider value={{ ...state, addtoCart, removeitem ,ClearCart,updateItemQuantity}}>
         {children}
     </CartContext.Provider>
 }

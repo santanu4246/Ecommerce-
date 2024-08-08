@@ -3,7 +3,7 @@ import './ProductList.css';
 import { Link } from 'react-router-dom';
 import FormatPrice from './Helper/FormatPrice';
 const ProductList = ({ filter_products }) => {
-  console.log(filter_products);
+  // console.log(filter_products);
   return (
     
     <div className='ProductListContainer'>

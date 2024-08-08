@@ -4,7 +4,7 @@ import { FaXmark } from "react-icons/fa6";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 import { MdOutlineShoppingCart } from "react-icons/md";
-
+import { useCartContext } from "../../Context/CartContext";
 const Nav = () => {
   const [mobilenav, setmobilenav] = useState(false);
 
@@ -18,6 +18,9 @@ const Nav = () => {
     setmobilenav(true);
   };
 
+  const {amount} = useCartContext();
+  console.log(amount);
+  
   return (
     <>
       <div className="mobile-nav">
@@ -50,7 +53,7 @@ const Nav = () => {
               onClick={handleCrossClick}
             />
             <div className="items-count" onClick={handleCrossClick}>
-              0
+              {amount}
             </div>
           </div>
         </Link>
