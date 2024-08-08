@@ -11,13 +11,17 @@ function getLocalCartData (){
         return JSON.parse(LocalData)
     }
 }
+function getLocalCartAmount() {
+    const storedAmount = localStorage.getItem('cartAmount');
+    return storedAmount ? Number(storedAmount) : 0;
+}
 const initialstate = {
     // cart: [],
     cart : getLocalCartData(),
     total_item: "",
     total_amount: "",
     shipping_fee: 50000,
-    amount:0
+    amount:getLocalCartAmount()
 }
 
 
@@ -29,7 +33,10 @@ const CartProvider = ({ children }) => {
         localStorage.setItem("santanuCart", JSON.stringify(state.cart))
 
     }, [state.cart])
-
+    
+    useEffect(() => {
+        localStorage.setItem('cartAmount', state.amount);
+    }, [state.amount]);
     const addtoCart = (id, Color, Product) => {
         dispatch({ type: "ADD_TO_CART", payload: { id, Color, Product } })
     }
