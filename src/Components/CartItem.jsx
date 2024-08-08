@@ -11,28 +11,23 @@ const CartItem = ({ id, name, image, Color, price, max }) => {
     return storedAmount ? parseInt(storedAmount) : 1;
   });
 
+  const { removeitem, updateItemQuantity } = useCartContext();
+  const increaseAmount = () => {
+    setAmount((prevAmount) => {
+      const newAmount = prevAmount + 1;
+      updateItemQuantity(id, newAmount);
+      return newAmount;
+    });
+  };
 
+  const decreaseAmount = () => {
+    setAmount((prevAmount) => {
+      const newAmount = prevAmount - 1;
+      updateItemQuantity(id, newAmount);
+      return newAmount;
+    });
+  };
 
-  const { removeitem,updateItemQuantity } = useCartContext();
-const increaseAmount = () => {
-  setAmount((prevAmount) => {
-    const newAmount = prevAmount + 1 ;
-    updateItemQuantity(id, newAmount);
-    return newAmount;
-  });
-};
-
-const decreaseAmount = () => {
-  setAmount((prevAmount) => {
-    const newAmount = prevAmount - 1 ;
-    updateItemQuantity(id, newAmount);
-    return newAmount;
-  });
-};
-
-
-
-  // Store amount in localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem(`cartItem_${id}_amount`, amount.toString());
   }, [amount, id]);
@@ -62,12 +57,18 @@ const decreaseAmount = () => {
       </div>
 
       <div className="Cart-item-quantity cardItemInnerX">
-        <button onClick={decreaseAmount} style={{pointerEvents: amount <= 1 ? 'none' : 'auto' }}>
-          <FaMinus style={{pointerEvents: amount <= 1 ? 'none' : 'auto' }}/>
+        <button
+          onClick={decreaseAmount}
+          style={{ pointerEvents: amount <= 1 ? "none" : "auto" }}
+        >
+          <FaMinus style={{ pointerEvents: amount <= 1 ? "none" : "auto" }} />
         </button>
         <p>{amount}</p>
-        <button onClick={increaseAmount} style={{pointerEvents: amount >= max ? 'none' : 'auto' }}>
-          <FaPlus style={{pointerEvents: amount >= max ? 'none' : 'auto' }}/>
+        <button
+          onClick={increaseAmount}
+          style={{ pointerEvents: amount >= max ? "none" : "auto" }}
+        >
+          <FaPlus style={{ pointerEvents: amount >= max ? "none" : "auto" }} />
         </button>
       </div>
 
@@ -79,11 +80,10 @@ const decreaseAmount = () => {
 
       <div className="Cart-item-remove cardItemInnerX">
         <FaTrash
-          style={{ color: "red"}}
+          style={{ color: "red" }}
           onClick={() => {
             removeitem(id);
           }}
-          
         />
       </div>
     </div>

@@ -53,7 +53,11 @@ const CartReducer = (state, action) => {
             );
             return { ...state, amount:totalItems };
         }
-
+        case 'ADD_TO_CART_INCREMENT':
+            return {
+                ...state,
+                amount: state.amount + 1, // Increment the amount by 1
+            };
         default:
             return state;
     }

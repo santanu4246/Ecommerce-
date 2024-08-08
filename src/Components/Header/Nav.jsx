@@ -19,7 +19,6 @@ const Nav = () => {
   };
 
   const {amount} = useCartContext();
-  console.log(amount);
   
   return (
     <>
