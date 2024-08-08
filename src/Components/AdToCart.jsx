@@ -25,7 +25,7 @@ const AdToCart = ({ Product }) => {
                     ))
                 }
             </p>
-            <Link to={"/cart"} onClick={()=>addtoCart(id,Color,Product)}><button style={{width:"100px",borderRadius:"10px",marginTop:"20px"}}>Add to cart</button></Link>
+            <Link to={"/cart"} onClick={()=>addtoCart(id,Color,Product)}><button style={{width:"100px",height:"30px",borderRadius:"10px",marginTop:"20px" ,backgroundColor:"#8A2BE2",color:"white"}}>Add to cart</button></Link>
         </div>
     )
 }

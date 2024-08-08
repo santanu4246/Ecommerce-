@@ -15,6 +15,8 @@ const SingleProduct = () => {
   const { id } = useParams();
   // console.log(id);
   const { id: alis, name, company, price, description, category, stock, shipping, reviews, stars, image= [{url: ""}] } = singleProduct
+  // console.log(stock);
+  
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`)
   }, [])
@@ -58,7 +60,8 @@ const SingleProduct = () => {
 
             <div className="product-data-info">
               <p>Available: <span>{stock > 0 ? "In Stock" : "Not Available"}</span></p>
-
+          
+              
               <p>ID: <span> {id}</span></p>
 
               <p>Brand: <span> {company}</span></p>
